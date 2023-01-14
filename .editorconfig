@@ -283,10 +283,6 @@ dotnet_naming_style.prefix_interface_with_i_style.capitalization                
 dotnet_naming_style.prefix_with_underscore_style.required_prefix                = _
 dotnet_naming_style.prefix_with_underscore_style.capitalization                 = camel_case
 
-# suffix_method_with_async_style - Async method must be suffix by 'Async' key word
-dotnet_naming_style.suffix_method_with_async_style.required_suffix              = Async
-dotnet_naming_style.suffix_method_with_async_style.capitalization               = pascal_case
-
 # ----------------------
 # NAMING RULES
 # ----------------------
