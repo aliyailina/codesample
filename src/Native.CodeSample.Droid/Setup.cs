@@ -1,6 +1,10 @@
 using Microsoft.Extensions.Logging;
 
+using MvvmCross.IoC;
 using MvvmCross.Platforms.Android.Core;
+
+using Native.CodeSample.Core.Services.ToastPresenter;
+using Native.CodeSample.Droid.Services.ToastPresenter;
 
 using Serilog;
 using Serilog.Extensions.Logging;
@@ -19,6 +23,11 @@ namespace Native.CodeSample.Droid
                 .CreateLogger();
 
             return new SerilogLoggerFactory();
+        }
+
+        protected override void InitializeFirstChance(IMvxIoCProvider provider)
+        {
+            provider.LazyConstructAndRegisterSingleton<IToastPresenter, ToastPresenter>();
         }
     }
 }

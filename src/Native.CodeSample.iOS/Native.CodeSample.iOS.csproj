@@ -77,6 +77,7 @@
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Services\ToastPresenter\ToastPresenter.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\FirstViewController.cs" />
     <Compile Include="Views\SecondViewController.cs" />

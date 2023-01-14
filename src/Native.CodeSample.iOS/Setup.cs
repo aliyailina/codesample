@@ -1,8 +1,12 @@
 using Microsoft.Extensions.Logging;
 
+using MvvmCross.IoC;
 using MvvmCross.Platforms.Ios.Core;
 
 using Native.CodeSample.Core;
+
+using Native.CodeSample.iOS.Services.ToastPresenter;
+using Native.CodeSample.Core.Services.ToastPresenter;
 
 using Serilog;
 using Serilog.Extensions.Logging;
@@ -21,6 +25,11 @@ namespace Native.CodeSample.iOS
                 .CreateLogger();
 
             return new SerilogLoggerFactory();
+        }
+
+        protected override void InitializeFirstChance(IMvxIoCProvider provider)
+        {
+            provider.LazyConstructAndRegisterSingleton<IToastPresenter, ToastPresenter>();
         }
     }
 }
