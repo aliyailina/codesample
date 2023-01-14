@@ -5,6 +5,8 @@ using MvvmCross.Platforms.Android.Views;
 
 using Native.CodeSample.Core.ViewModels;
 
+using Xamarin.Essentials;
+
 namespace Native.CodeSample.Droid.Views
 {
     [Activity(
@@ -18,6 +20,7 @@ namespace Native.CodeSample.Droid.Views
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            Platform.Init(this, savedInstanceState);
             AndroidX.Core.SplashScreen.SplashScreen.InstallSplashScreen(this);
         }
     }
