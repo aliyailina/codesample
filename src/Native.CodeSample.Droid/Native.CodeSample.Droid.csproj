@@ -102,11 +102,11 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\animator\splash_icon_scale.xml" />
     <AndroidResource Include="Resources\drawable\branding_circle.xml" />
     <AndroidResource Include="Resources\drawable\ic_launcher_foreground.xml" />
+    <AndroidResource Include="Resources\drawable\logo.xml" />
     <AndroidResource Include="Resources\drawable\splash_animated_icon.xml" />
-    <AndroidResource Include="Resources\drawable\splash_icon_middle.xml" />
-    <AndroidResource Include="Resources\drawable\splash_icon_start.xml" />
     <AndroidResource Include="Resources\values-night\colors.xml" />
     <AndroidResource Include="Resources\values\strings.xml" />
     <AndroidResource Include="Resources\values\styles.xml" />
