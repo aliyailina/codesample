@@ -8,11 +8,12 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Android.Views;
 using MvvmCross.Platforms.Android.Binding;
 
+using Native.CodeSample.Droid.Views.Base;
 using Native.CodeSample.Core.ViewModels.First;
 
 using Xamarin.Essentials;
 
-namespace Native.CodeSample.Droid.Views
+namespace Native.CodeSample.Droid.Views.First
 {
     [Activity(
         NoHistory = true,

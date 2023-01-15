@@ -3,7 +3,7 @@ using MvvmCross.Platforms.Android.Views;
 
 using Native.CodeSample.Core.ViewModels.Base;
 
-namespace Native.CodeSample.Droid.Views
+namespace Native.CodeSample.Droid.Views.Base
 {
     /// <summary>
     /// Base activity for app

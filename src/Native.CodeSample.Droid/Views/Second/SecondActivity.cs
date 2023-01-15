@@ -3,9 +3,10 @@ using Android.App;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Android.Views;
 
+using Native.CodeSample.Droid.Views.Base;
 using Native.CodeSample.Core.ViewModels.Second;
 
-namespace Native.CodeSample.Droid.Views
+namespace Native.CodeSample.Droid.Views.Second
 {
     [Activity(Theme = "@style/AppTheme")]
     public sealed class SecondActivity : BaseActivity<SecondViewModel>
