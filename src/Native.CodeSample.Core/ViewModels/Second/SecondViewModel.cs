@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Logging;
+
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
@@ -11,8 +13,8 @@ namespace Native.CodeSample.Core.ViewModels.Second
         private string _previousPageFirstText;
         private string _previousPageSecondText;
 
-        public SecondViewModel(IMvxNavigationService navigationService, IToastPresenter toastPresenter)
-            : base(navigationService, toastPresenter)
+        public SecondViewModel(ILoggerFactory loggerFactory, IMvxNavigationService navigationService,
+            IToastPresenter toastPresenter) : base(loggerFactory, navigationService, toastPresenter)
         { }
 
         public void Prepare(SecondNavigationParameter parameter)

@@ -1,5 +1,7 @@
 using System.Threading.Tasks;
 
+using Microsoft.Extensions.Logging;
+
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
@@ -45,8 +47,9 @@ namespace Native.CodeSample.Core.ViewModels.First
         /// <summary>
         /// Initializes a new instance of <see cref="FirstViewModel"/> class
         /// </summary>
-        public FirstViewModel(IMvxNavigationService navigationService, IToastPresenter toastPresenter,
-            IInputValidator inputValidator) : base(navigationService, toastPresenter)
+        public FirstViewModel(ILoggerFactory loggerFactory, IMvxNavigationService navigationService,
+            IToastPresenter toastPresenter, IInputValidator inputValidator) : base(loggerFactory, navigationService,
+            toastPresenter)
         {
             _inputValidator = inputValidator;
         }

@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Logging;
+
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using MvvmCross.Localization;
@@ -9,10 +11,12 @@ namespace Native.CodeSample.Core.ViewModels.Base
     /// <summary>
     /// Base class for view models
     /// </summary>
-    public abstract class BaseViewModel : MvxViewModel, IMvxLocalizedTextSourceOwner
+    public abstract class BaseViewModel : MvxNavigationViewModel, IMvxLocalizedTextSourceOwner
     {
-        protected readonly IMvxNavigationService NavigationService;
         protected readonly IToastPresenter ToastPresenter;
+
+        /// <inheritdoc cref="MvxNavigationViewModel.NavigationService"/>
+        protected override IMvxNavigationService NavigationService { get; }
 
         /// <inheritdoc cref="IMvxLocalizedTextSourceOwner.LocalizedTextSource"/>
         public IMvxLanguageBinder LocalizedTextSource { get; }
@@ -20,7 +24,8 @@ namespace Native.CodeSample.Core.ViewModels.Base
         /// <summary>
         /// Initializes a new instance of <see cref="BaseViewModel"/> inheritor
         /// </summary>
-        protected BaseViewModel(IMvxNavigationService navigationService, IToastPresenter toastPresenter)
+        protected BaseViewModel(ILoggerFactory loggerFactory, IMvxNavigationService navigationService,
+            IToastPresenter toastPresenter) : base(loggerFactory, navigationService)
         {
             NavigationService = navigationService;
             ToastPresenter = toastPresenter;
