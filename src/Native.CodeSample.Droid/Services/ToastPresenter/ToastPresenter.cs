@@ -13,6 +13,6 @@ namespace Native.CodeSample.Droid.Services.ToastPresenter
     {
         /// <inheritdoc cref="IToastPresenter.Show"/>
         public void Show(string text) =>
-            Toast.MakeText(Platform.CurrentActivity, text, ToastLength.Short);
+            Toast.MakeText(Platform.CurrentActivity, text, ToastLength.Short)!.Show();
     }
 }

@@ -27,6 +27,8 @@ namespace Native.CodeSample.Droid
 
         protected override void InitializeFirstChance(IMvxIoCProvider provider)
         {
+            base.InitializeFirstChance(provider);
+
             provider.LazyConstructAndRegisterSingleton<IToastPresenter, ToastPresenter>();
         }
     }

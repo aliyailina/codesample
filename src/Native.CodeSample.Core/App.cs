@@ -1,8 +1,12 @@
 ﻿using MvvmCross;
 using MvvmCross.IoC;
+using MvvmCross.Plugin;
 using MvvmCross.ViewModels;
+using MvvmCross.Localization;
+using MvvmCross.Plugin.ResxLocalization;
 
-using Native.CodeSample.Core.ViewModels;
+using Native.CodeSample.Core.Localization;
+using Native.CodeSample.Core.ViewModels.First;
 
 using Native.CodeSample.Core.Services.InputValidator;
 
@@ -24,6 +28,13 @@ namespace Native.CodeSample.Core
             Provider.LazyConstructAndRegisterSingleton<IInputValidator, InputValidator>();
 
             RegisterAppStart<FirstViewModel>();
+        }
+
+        public override void LoadPlugins(IMvxPluginManager pluginManager)
+        {
+            Provider.RegisterSingleton<IMvxTextProvider>(new MvxResxTextProvider(Resources.ResourceManager));
+
+            base.LoadPlugins(pluginManager);
         }
     }
 }

@@ -85,6 +85,9 @@
     <PackageReference Include="MvvmCross.DroidX.Material">
       <Version>8.0.2</Version>
     </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.ResxLocalization">
+      <Version>8.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Serilog.Extensions.Logging">
       <Version>3.0.1</Version>
     </PackageReference>
@@ -111,6 +114,8 @@
     <AndroidResource Include="Resources\drawable\ic_launcher_foreground.xml" />
     <AndroidResource Include="Resources\drawable\logo.xml" />
     <AndroidResource Include="Resources\drawable\splash_animated_icon.xml" />
+    <AndroidResource Include="Resources\layout\first.xml" />
+    <AndroidResource Include="Resources\layout\second.xml" />
     <AndroidResource Include="Resources\values-night\colors.xml" />
     <AndroidResource Include="Resources\values\strings.xml" />
     <AndroidResource Include="Resources\values\styles.xml" />

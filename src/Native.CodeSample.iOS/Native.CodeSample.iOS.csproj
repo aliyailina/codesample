@@ -79,7 +79,10 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Services\ToastPresenter\ToastPresenter.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="Views\FirstViewController.cs" />
+    <Compile Include="Views\First\FirstViewController.cs" />
+    <Compile Include="Views\First\FirstViewController.designer.cs">
+      <DependentUpon>FirstViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\SecondViewController.cs" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120.png" />
@@ -95,6 +98,7 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\87.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <InterfaceDefinition Include="Views\First\FirstViewController.xib" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
     </None>
@@ -125,6 +129,9 @@
       <Version>6.0.1</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross">
+      <Version>8.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.ResxLocalization">
       <Version>8.0.2</Version>
     </PackageReference>
     <PackageReference Include="Serilog.Extensions.Logging">
