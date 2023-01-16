@@ -8,6 +8,7 @@ using MvvmCross.Plugin.ResxLocalization;
 using Native.CodeSample.Core.Localization;
 using Native.CodeSample.Core.ViewModels.First;
 
+using Native.CodeSample.Core.Services.Items;
 using Native.CodeSample.Core.Services.InputValidator;
 
 namespace Native.CodeSample.Core
@@ -26,6 +27,7 @@ namespace Native.CodeSample.Core
                 .RegisterAsLazySingleton();
 
             Provider.LazyConstructAndRegisterSingleton<IInputValidator, InputValidator>();
+            Provider.LazyConstructAndRegisterSingleton<IItemsCollector, ItemsCollector>();
 
             RegisterAppStart<FirstViewModel>();
         }

@@ -7,7 +7,9 @@ using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
+using Native.CodeSample.Core.Services.Items;
 using Native.CodeSample.Core.ViewModels.Base;
+using Native.CodeSample.Core.ViewModels.Second.Tabs;
 using Native.CodeSample.Core.Services.ToastPresenter;
 
 namespace Native.CodeSample.Core.ViewModels.Second
@@ -15,22 +17,23 @@ namespace Native.CodeSample.Core.ViewModels.Second
     /// <summary>
     /// View model for second page
     /// </summary>
-    public sealed class SecondViewModel : BaseViewModel, IMvxViewModel<SecondNavigationParameter>
+    public sealed class SecondViewModel : BaseSecondViewModel, IMvxViewModel<SecondNavigationParameter>
     {
         private SecondNavigationParameter _previousPageTexts;
 
-        private ICommand _initTabsCommand;
+        private IMvxAsyncCommand _initTabsCommand;
         /// <summary>
         /// Initializes tab subpages
         /// </summary>
-        public ICommand InitTabsCommand => _initTabsCommand
+        public IMvxAsyncCommand InitTabsCommand => _initTabsCommand
             ??= new MvxAsyncCommand(InitTabsCommandExecute);
 
         /// <summary>
         /// Initializes a new instance of <see cref="SecondViewModel"/> class
         /// </summary>
         public SecondViewModel(ILoggerFactory loggerFactory, IMvxNavigationService navigationService,
-            IToastPresenter toastPresenter) : base(loggerFactory, navigationService, toastPresenter)
+            IToastPresenter toastPresenter, IItemsCollector itemsCollector) : base(loggerFactory, navigationService,
+            toastPresenter, itemsCollector)
         { }
 
         public void Prepare(SecondNavigationParameter parameter) =>

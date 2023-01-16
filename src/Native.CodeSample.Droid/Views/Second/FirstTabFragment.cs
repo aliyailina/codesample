@@ -10,6 +10,7 @@ using MvvmCross.Platforms.Android.Presenters.Attributes;
 
 using Native.CodeSample.Droid.Views.Base;
 using Native.CodeSample.Core.ViewModels.Second;
+using Native.CodeSample.Core.ViewModels.Second.Tabs;
 
 namespace Native.CodeSample.Droid.Views.Second
 {
@@ -39,11 +40,13 @@ namespace Native.CodeSample.Droid.Views.Second
         {
             set.Bind(_firstTextView)
                 .For(v => v.BindText())
-                .To(vm => vm.PreviousFirstText);
+                .To(vm => vm.PreviousFirstText)
+                .OneWay();
 
             set.Bind(_secondTextView)
                 .For(v => v.BindText())
-                .To(vm => vm.PreviousSecondText);
+                .To(vm => vm.PreviousSecondText)
+                .OneWay();
 
             set.Apply();
         }

@@ -27,10 +27,12 @@
             android:layout_above="@id/tabs"
             android:layout_gravity="center"/>
     </RelativeLayout>
-    
-    <!-- TODO: replace with list -->
-    <View
+
+    <mvvmcross.droidx.recyclerview.MvxRecyclerView
+        android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:layout_marginVertical="10dp"
+        app:MvxItemTemplate="@layout/item_template"/>
 </LinearLayout>

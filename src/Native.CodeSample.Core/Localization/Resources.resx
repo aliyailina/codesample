@@ -24,4 +24,10 @@
   <data name="FirstViewModel.ButtonTitle" xml:space="preserve">
     <value>Go</value>
   </data>
+  <data name="SecondTabViewModel.FirstButtonTitle" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="SecondTabViewModel.SecondButtonTitle" xml:space="preserve">
+    <value>Delete first</value>
+  </data>
 </root>

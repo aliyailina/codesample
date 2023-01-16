@@ -9,6 +9,7 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
     <PackageReference Include="MvvmCross" Version="8.0.2" />
     <PackageReference Include="MvvmCross.Plugin.ResxLocalization" Version="8.0.2" />
+    <PackageReference Include="MvvmCross.Plugin.Visibility" Version="8.0.2" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.4" />
   </ItemGroup>
 
