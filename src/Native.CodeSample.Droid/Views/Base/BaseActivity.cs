@@ -19,13 +19,15 @@ namespace Native.CodeSample.Droid.Views.Base
         /// <summary>
         /// Creates bindings
         /// </summary>
-        protected abstract void CreateBindings(
-            MvxFluentBindingDescriptionSet<IMvxAndroidView<TViewModel>, TViewModel> set);
+        protected virtual void CreateBindings(
+            MvxFluentBindingDescriptionSet<IMvxAndroidView<TViewModel>, TViewModel> set)
+        { }
 
         /// <summary>
         /// Initializes activity specific view variables
         /// </summary>
-        protected abstract void FindViews();
+        protected virtual void FindViews()
+        { }
 
         /// <summary>
         /// Initializes view
