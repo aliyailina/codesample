@@ -7,6 +7,7 @@ using MvvmCross.ViewModels;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Android.Views;
 using MvvmCross.Platforms.Android.Binding;
+using MvvmCross.Platforms.Android.Presenters.Attributes;
 
 using Native.CodeSample.Droid.Views.Base;
 using Native.CodeSample.Core.ViewModels.First;
@@ -15,6 +16,7 @@ using Xamarin.Essentials;
 
 namespace Native.CodeSample.Droid.Views.First
 {
+    [MvxActivityPresentation]
     [Activity(
         NoHistory = true,
         MainLauncher = true,
