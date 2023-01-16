@@ -83,7 +83,20 @@
     <Compile Include="Views\First\FirstViewController.designer.cs">
       <DependentUpon>FirstViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\SecondViewController.cs" />
+    <Compile Include="Views\Second\BaseTabViewController.cs" />
+    <Compile Include="Views\Second\FirstTab\FirstTabViewController.cs" />
+    <Compile Include="Views\Second\FirstTab\FirstTabViewController.designer.cs">
+      <DependentUpon>FirstTabViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Second\ItemCell\ItemCell.cs" />
+    <Compile Include="Views\Second\ItemCell\ItemCell.designer.cs">
+      <DependentUpon>ItemCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Second\SecondTab\SecondTabViewController.cs" />
+    <Compile Include="Views\Second\SecondTab\SecondTabViewController.designer.cs">
+      <DependentUpon>SecondTabViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Second\SecondViewController.cs" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\152.png" />
@@ -99,6 +112,9 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\87.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <InterfaceDefinition Include="Views\First\FirstViewController.xib" />
+    <InterfaceDefinition Include="Views\Second\FirstTab\FirstTabViewController.xib" />
+    <InterfaceDefinition Include="Views\Second\ItemCell\ItemCell.xib" />
+    <InterfaceDefinition Include="Views\Second\SecondTab\SecondTabViewController.xib" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
     </None>

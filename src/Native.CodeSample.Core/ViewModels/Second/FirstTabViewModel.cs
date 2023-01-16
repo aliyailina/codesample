@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
+using Native.CodeSample.Core.Services.Items;
 using Native.CodeSample.Core.ViewModels.Base;
 using Native.CodeSample.Core.Services.ToastPresenter;
 
@@ -11,7 +12,7 @@ namespace Native.CodeSample.Core.ViewModels.Second
     /// <summary>
     /// View model for first tab in <see cref="SecondViewModel"/>
     /// </summary>
-    public sealed class FirstTabViewModel : BaseViewModel, IMvxViewModel<SecondNavigationParameter>
+    public sealed class FirstTabViewModel : BaseSecondViewModel, IMvxViewModel<SecondNavigationParameter>
     {
         /// <summary>
         /// Shows <see cref="First.FirstViewModel.FirstText"/>
@@ -27,7 +28,8 @@ namespace Native.CodeSample.Core.ViewModels.Second
         /// Initializes a new instance of <see cref="FirstTabViewModel"/> class
         /// </summary>
         public FirstTabViewModel(ILoggerFactory loggerFactory, IMvxNavigationService navigationService,
-            IToastPresenter toastPresenter) : base(loggerFactory, navigationService, toastPresenter)
+            IToastPresenter toastPresenter, IItemsCollector itemsCollector) : base(loggerFactory, navigationService,
+            toastPresenter, itemsCollector)
         { }
 
         public void Prepare(SecondNavigationParameter parameter)
