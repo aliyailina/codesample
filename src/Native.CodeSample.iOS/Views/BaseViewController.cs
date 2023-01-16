@@ -15,6 +15,7 @@ namespace Native.CodeSample.iOS.Views
             CreateBindings(CreateBindingSet());
         }
 
-        protected abstract void CreateBindings(MvxFluentBindingDescriptionSet<IMvxIosView<TViewModel>, TViewModel> set);
+        protected virtual void CreateBindings(MvxFluentBindingDescriptionSet<IMvxIosView<TViewModel>, TViewModel> set)
+        { }
     }
 }

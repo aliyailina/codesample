@@ -7,8 +7,5 @@ namespace Native.CodeSample.iOS.Views
 {
     public sealed class SecondViewController : BaseViewController<SecondViewModel>
     {
-        protected override void CreateBindings(
-            MvxFluentBindingDescriptionSet<IMvxIosView<SecondViewModel>, SecondViewModel> set)
-        { }
     }
 }
