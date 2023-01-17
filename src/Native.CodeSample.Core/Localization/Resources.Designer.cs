@@ -68,5 +68,17 @@ namespace Native.CodeSample.Core.Localization {
                 return ResourceManager.GetString("SecondTabViewModel.SecondButtonTitle", resourceCulture);
             }
         }
+        
+        internal static string FirstTabViewModel_TabTitle {
+            get {
+                return ResourceManager.GetString("FirstTabViewModel.TabTitle", resourceCulture);
+            }
+        }
+        
+        internal static string SecondTabViewModel_TabTitle {
+            get {
+                return ResourceManager.GetString("SecondTabViewModel.TabTitle", resourceCulture);
+            }
+        }
     }
 }

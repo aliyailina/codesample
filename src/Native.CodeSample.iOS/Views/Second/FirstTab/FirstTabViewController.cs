@@ -10,7 +10,7 @@ using Native.CodeSample.Core.ViewModels.Second;
 
 namespace Native.CodeSample.iOS.Views.Second.FirstTab
 {
-    [MvxTabPresentation(TabName = "Tab 1")]
+    [MvxTabPresentation]
     [Register(nameof(FirstTabViewController))]
     public partial class FirstTabViewController : BaseTabViewController<FirstTabViewModel>
     {

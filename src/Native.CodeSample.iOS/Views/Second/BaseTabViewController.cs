@@ -34,6 +34,10 @@ namespace Native.CodeSample.iOS.Views.Second
             set.Bind(_source)
                 .For(v => v.ItemsSource)
                 .To(vm => vm.Items);
+
+            set.Bind(this)
+                .For(v => v.Title)
+                .ToLocalizationId("TabTitle");
         }
 
         private void InitTable()
